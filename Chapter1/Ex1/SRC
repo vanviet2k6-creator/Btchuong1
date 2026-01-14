@@ -1,1 +1,21 @@
+package com.mycompany.chaper1;
 
+public class Test<T> {
+    private T data;
+
+    public void set(T t) {
+        this.data = t;
+    }
+
+    public T get() {
+        return this.data;
+    }
+    public static void main(String[] args) {
+        Test<Integer> t1 = new Test<>();
+        t1.set(100);
+        System.out.println("Gia tri Integer: " + t1.get());
+        Test<String> t2 = new Test<>();
+        t2.set("Chay thanh cong!");
+        System.out.println("Gia tri String: " + t2.get());
+    }
+}
