@@ -1,0 +1,26 @@
+package com.mycompany.chaper1;
+import java.util.HashSet;
+
+public class Exercise6 {
+    public static void main(String[] args) {
+        int[] numbers = {5, 2, 9, 2, 5, 8, 1};
+        System.out.println("Mang ban dau: {5, 2, 9, 2, 5, 8, 1}");
+        HashSet<Integer> uniqueNumbers = new HashSet<>();
+        for (int num : numbers) {
+            uniqueNumbers.add(num);
+        }
+        System.out.println("Cac phan tu duy nhat trong HashSet: " + uniqueNumbers);
+
+        /*
+          - HashSet hoạt động dựa trên cơ chế "Hashing" khi bạn thêm một số (vd số 9)
+          Java không đặt nó vào cuối danh sách mà sẽ tính toán một "Hash Code" (đchi băm) 
+          để quyết định vị trí đặt số 9 vào một cái "thùng" (bucket) lưu trữ
+         - Mục tiêu của HashSet là TỐI ƯU TỐC ĐỘ: Việc tìm kiếm một phần tử trong bảng băm 
+          nhanh hơn rất nhiều so với việc đi tìm từng phần tử trong một mảng dài
+           - Vì được sắp xếp theo địa chỉ bộ nhớ (Hash Code) thay vì thứ tự thời gian bạn thêm vào
+          nên khi in ra thứ tự các con số sẽ bị "xáo trộn" so với mảng gốc
+           ---> Nếu bài toán yêu cầu VỪA KHÔNG TRÙNG LẶP VỪA GIỮ ĐÚNG THỨ TỰ 
+          bạn hãy thay HashSet bằng LinkedHashSet
+         */
+    }
+}
