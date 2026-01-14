@@ -1,0 +1,20 @@
+package com.mycompany.chaper1;
+
+import java.util.LinkedList;
+public class Exercise5 {
+    public static void main(String[] args) {
+        LinkedList<Integer> queue = new LinkedList<>();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+        System.out.println("Danh sach sau khi them 10, 20, 30: " + queue);
+
+        queue.addFirst(5);  
+        queue.addLast(40);  
+        System.out.println("Sau khi them 5 vao dau va 40 vao cuoi: " + queue);
+
+        queue.removeFirst(); 
+        queue.removeLast(); 
+        System.out.println("Danh sach con lai sau khi xoa đau va cuoi: " + queue);
+    }
+}
